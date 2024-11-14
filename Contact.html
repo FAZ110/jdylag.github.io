@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="navbar.css">
+
+</head>
+<body>
+  <div class="container">
+
+    <nav class="navbar">
+        <ul class="links">
+            <button onclick="goToPage('index.html')">Home</button>
+            <button onclick="goToPage('Gallery.html')">Gallery</button>
+            <button onclick="goToPage('Contact.html')">Contact</button>
+        </ul>
+    </nav>
+
+    <footer class="footer">
+        <h3>Jan Dyląg</h3>
+
+    </footer>
+    
+    <h1>Contact Form</h1>
+    <form id="contactForm" onsubmit="return handleFormSubmit()">
+        <input type="text" id="email" placeholder="Enter your email" required>
+        <p id="error" style="color: red; display: none; font-size: 0.9em; margin-top: 5px;">Invalid email!</p>
+        <select id="subject">
+          <option value="question">Question</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select>
+        <textarea id="message" placeholder="Type your message" required></textarea>
+        <input type="submit" value="Send">
+      </form>
+      
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
